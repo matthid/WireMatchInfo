@@ -16,12 +16,6 @@ namespace UserData
         private List<Player> players;
         private HtmlDocument matchDocument;
 
-        public enum KindOfMatch
-        {
-            Versus,
-            Regular
-        }
-
         ////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////   MatchMember() (constructor)   ////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
@@ -170,12 +164,11 @@ namespace UserData
         ////////////////////////   GetMatchMembers(string matchlink, KindOfMatch kind)   //////
         ///////////////////////////////////////////////////////////////////////////////////////
 
-        public List<Player> GetMatchMembers(string matchlink, KindOfMatch kind)
+        public List<Player> GetMatchMembers(string matchlink)
         {
             players = new List<Player>();
 
-
-            if (kind == KindOfMatch.Versus)
+            if (matchlink.Contains("versus"))
             {
                 IEnumerable<HtmlNode> memberNodes = GetVersusMatchMemberNodes(matchlink);
 

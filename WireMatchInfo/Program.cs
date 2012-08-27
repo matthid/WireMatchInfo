@@ -19,7 +19,7 @@ namespace UserData
             Console.WriteLine("Downloading Matchinfo. This will take some seconds !!\n");
             MatchMember mm = new MatchMember();
 
-            List<MatchMember.Player> pl = mm.GetMatchMembers("http://www.esl.eu/de/css/ui/versus/match/2758197", MatchMember.KindOfMatch.Versus);
+            List<MatchMember.Player> pl = mm.GetMatchMembers("http://www.esl.eu/de/css/ui/versus/match/2758197");
 
             Console.WriteLine();
 
